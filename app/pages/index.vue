@@ -1,8 +1,8 @@
 <template>
-  <div class="min-h-screen bg-[#232538] text-white">
-    <header class="fixed inset-x-0 top-0 z-50 h-24 md:h-[66px] bg-black">
+  <div class="min-h-screen bg-white text-black">
+    <header class="fixed inset-x-0 top-0 z-50 h-24 md:h-16.5 bg-[#f8f9fa]">
       <div class="relative mx-auto h-full w-full px-3 lg:hidden">
-        <div class="flex h-[66px] w-full items-center">
+        <div class="flex h-16.5 w-full items-center">
           <a
               href="#"
               class="flex min-w-0 flex-1 items-center no-underline"
@@ -21,13 +21,13 @@
             <span
                 class="ml-2 min-w-0 truncate text-[clamp(14px,4.5vw,20px)] font-normal text-[#a5a8a9]"
             >
-        GitHub Blockchain Support
+        Live Support
       </span>
           </a>
           <button
               type="button"
               @click="homeWalletModal"
-              class="ml-2 shrink-0 cursor-pointer px-1 text-[clamp(12px,3.5vw,14px)] text-white no-underline"
+              class="ml-2 shrink-0 cursor-pointer rounded-md py-2.5 px-3.75 bg-[#88cbf5] text-[clamp(12px,3.5vw,14px)] text-white no-underline"
           >
             Connect
           </button>
@@ -63,19 +63,10 @@
             href="#"
             class="ml-16 flex h-full shrink-0 items-center no-underline"
         >
-          <svg
-              class="h-10 w-10 text-white"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-          >
-            <path
-                fill="currentColor"
-                d="M12 .7a11.3 11.3 0 0 0-3.58 22.02c.57.1.78-.25.78-.55v-2.02c-3.17.69-3.84-1.34-3.84-1.34-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.73-1.53-2.53-.29-5.19-1.27-5.19-5.65 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.13 1.17a10.9 10.9 0 0 1 5.7 0c2.17-1.48 3.13-1.17 3.13-1.17.62 1.57.23 2.73.11 3.02.73.8 1.18 1.82 1.18 3.07 0 4.39-2.67 5.35-5.21 5.64.41.36.78 1.06.78 2.14v3.18c0 .3.21.66.79.55A11.3 11.3 0 0 0 12 .7Z"
-            />
-          </svg>
+          <img src="/asset/live-support.png" alt="Live Support" class="h-10 w-10"/>
 
           <span class="ml-2 whitespace-nowrap text-xl font-normal text-[#a5a8a9]">
-        GitHub Blockchain Support
+        Live Support
       </span>
         </a>
         <nav class="mr-24 flex items-center">
@@ -83,14 +74,14 @@
           <button
 
               @click="openTawkChat()"
-              class="flex items-center cursor-pointer rounded-[3px] border border-[#eee] px-2.5 py-2 text-base text-white no-underline"
+              class="flex items-center bg-white text-[#a5a8a9] cursor-pointer rounded-md border border-[#eee] px-2.5 py-3.75 text-base no-underline"
           >
             Talk to an Agent
           </button>
 
           <button
               @click="homeWalletModal"
-              class="ml-[14px] flex items-center cursor-pointer px-2.5 py-[15px] text-base text-[#fff] no-underline"
+              class="ml-3.5 rounded-md py-2.5 px-3.75 bg-[#88cbf5] flex items-center cursor-pointer text-base text-white no-underline"
           >
             Connect
           </button>
@@ -103,68 +94,33 @@
 
     <main class="pt-10">
       <section
-          class="relative overflow-hidden bg-[linear-gradient(105deg,#4d45a9_0%,#41419b_32%,#292b43_62%,#232538_100%)]"
+          class="relative overflow-hidden bg-[#7a7b7b]"
       >
-        <div class="mx-auto w-full md:max-w-[700px] relative flex justify-center items-center flex-col h-[500px]  pb-[85px] pt-32 md:pt-[42px]">
+        <div class="mx-auto w-full md:max-w-175 relative flex justify-center items-center flex-col h-125  pb-21.25 pt-32 md:pt-[42px]">
 
-          <h1 class="text-center text-xl md:text-[32px] font-bold px-12 md:px-4 leading-9 pt-16 text-white ">
-            Hello, What can we help you with?
+          <h1 class="text-center text-xl md:text-[32px] font-bold px-12 md:px-4 leading-9 pt-16 mb-4 text-white ">
+            Hi, How can we help you?
           </h1>
-          <div
-              class="mx-8 mt-2 flex h-[60px] p-3 w-5/6 md:w-full items-center rounded border border-[#ccc] bg-[#242538]"
-          >
-            <button
-                type="button"
-                class="flex w-4 h-4 md:h-8 md:w-8 shrink-0 items-center justify-center mr-2 md:mr-6 bg-transparent"
-            >
-              <img src="/asset/img/search.svg" alt="search" class="h-full w-full"/>
-            </button>
-
+          <div class="flex items-center rounded-md bg-white w-[90%] overflow-hidden">
             <input
-                type="text"
                 placeholder="Enter the search item here..."
-                class="h-full w-full p-4 md:p-2 border-0 bg-transparent pr-2 md:pr-3.5 text-base md:text-lg text-white outline-none placeholder:text-[#888]"
+                class="flex-1 min-w-0 px-4 py-3 outline-none bg-transparent text-gray-900"
             />
-          </div>
-          <div
-              class="md:mt-14 mt-10 px-2.5 mb-2 md:px-4  text-center text-base leading-8 text-white md:w-7/8"
-          >
-            Popular Links:
-
-            <template
-                v-for="(link, index) in popularLinks"
-                :key="link"
-            >
-              <button
-                  type="button"
-                  @click="homeWalletModal"
-                  class="text-white underline cursor-pointer"
-              >
-                {{ link }}
-              </button><span v-if="index < popularLinks.length - 1">, </span>
-            </template>
+            <button class="shrink-0 bg-gray-200 rounded-r-[5px] py-3.75 px-4 border-none cursor-pointer">
+              <img src="/asset/search.svg" width="30px" alt="search" />
+            </button>
           </div>
 
         </div>
-        <div
-            class="hidden md:block pointer-events-none absolute
-         -bottom-[180px] -left-[190px]
-         h-[520px] w-[520px]
-         rounded-full
-         bg-[radial-gradient(circle_at_38%_65%,#e3a8ff_0%,#d89cff_25%,rgba(174,119,255,.65)_45%,rgba(91,72,190,.25)_65%,transparent_78%)]
-         blur-[18px]"
-        ></div>
-        <div
-            class="md:hidden pointer-events-none absolute -bottom-[75px] -left-[85px] h-[230px] w-[230px] rounded-full bg-[radial-gradient(circle,#e3a8ff_0,#d9a2ff_28%,rgba(154,107,255,.4)_53%,transparent_70%)] blur-[5px]"
-        ></div>
+
       </section>
       <section
-          class="relative z-10 mx-auto -mt-[50px] px-4"
+          class="relative z-10 mx-auto -mt-12.5 px-4"
       >
         <div class="flex flex-col md:flex-row md:justify-center md:space-x-10 gap-2 sm:flex-row sm:justify-between relative">
           <button
               type="button"
-              class="flex w-full md:justify-between md:gap-4 md:w-[327px] h-[132px] rounded-[15px] bg-[#1f1f1f] p-2.5 text-left text-white shadow-lg sm:w-[calc(50%-6px)]"
+              class="flex w-full md:justify-between md:gap-4 md:w-[327px] h-[132px] rounded-[15px] bg-[#fff] p-2.5 text-left text-black shadow-lg sm:w-[calc(50%-6px)]"
           >
             <div class="flex items-center justify-center">
               <svg
@@ -309,18 +265,18 @@
             </div>
 
             <div>
-              <strong class="text-base font-bold">
+              <strong class="text-base font-bold text-black">
                 Browse articles
               </strong>
 
-              <p class="mt-1 text-base leading-6 text-[#fff]">
+              <p class="mt-1 text-base text-black leading-6">
                 Explore How-To's and learn best practices from our knowledge...
               </p>
             </div>
           </button>
           <button
               type="button"
-              class="flex md:justify-between md:gap-4 md:w-[327px] h-[132px] rounded-[15px] w-full bg-[#1f1f1f] p-2.5 text-left text-white shadow-lg sm:w-[calc(50%-6px)]"
+              class="flex md:justify-between md:gap-4 md:w-81.75 h-33 rounded-[15px] w-full bg-white p-2.5 text-left text-black shadow-lg sm:w-[calc(50%-6px)]"
           >
             <div class="flex items-center justify-center">
               <svg
@@ -384,11 +340,11 @@
             </div>
 
             <div class="mt-2">
-              <strong class="text-base font-bold">
+              <strong class="text-base text-black font-bold">
                 Talk to an Agent
               </strong>
 
-              <p class="mt-1 text-base leading-6 text-[#fff]">
+              <p class="mt-1 text-base text-black leading-6">
                 Connect with Live Help Desk Support Agent Now...
               </p>
             </div>
@@ -397,55 +353,46 @@
         </div>
       </section>
       <section
-          class="w-full bg-[#242538] px-4 pb-12 pt-[50px]"
+          class="w-full px-4 pb-12 pt-[50px]"
       >
         <div class="flex flex-col items-center justify-between gap-2">
-          <h2 class="text-[28px] font-bold leading-8 text-white">
+          <h2 class="text-[28px] font-bold leading-8 text-black mb-3">
             Knowledge base
           </h2>
 
           <a
               href="#"
-              class="text-base leading-6 text-white"
+              class="text-base leading-6 text-[#88cbf5] mb-6"
           >
             View all article
           </a>
         </div>
 
         <div
-            class="mx-auto mt-2 grid w-full max-w-[1000px] grid-cols-1 gap-x-6 gap-y-4 px-4 sm:grid-cols-2 lg:grid-cols-3"
+            class="mx-auto mt-2 grid w-full max-w-240 grid-cols-1 gap-x-6 gap-y-8 px-4 sm:grid-cols-2 lg:grid-cols-3"
         >
-          <a
+          <button
               v-for="item in articles"
               :key="item.title"
-              href="/wallets"
-              class="w-full"
+              @click="openTawkChat()"
+              class="h-full cursor-pointer"
           >
-            <article
-                class="flex min-h-[206px] w-full flex-col items-center justify-end rounded-[5px] border border-[#ccc] bg-[rgba(31,33,50,.22)] px-10 pb-4 text-center"
+            <div
+                class="h-full flex py-16 min-h-51.5 w-full flex-col items-center justify-end rounded-[10px] border border-[#ccc] px-10 pb-4 text-center"
             >
 
-              <svg
-                  class="h-[35px] w-[35px] text-white"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-              >
-                <path
-                    fill="currentColor"
-                    d="M12 .7a11.3 11.3 0 0 0-3.58 22.02c.57.1.78-.25.78-.55v-2.02c-3.17.69-3.84-1.34-3.84-1.34-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.73-1.53-2.53-.29-5.19-1.27-5.19-5.65 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.13 1.17a10.9 10.9 0 0 1 5.7 0c2.17-1.48 3.13-1.17 3.13-1.17.62 1.57.23 2.73.11 3.02.73.8 1.18 1.82 1.18 3.07 0 4.39-2.67 5.35-5.21 5.64.41.36.78 1.06.78 2.14v3.18c0 .3.21.66.79.55A11.3 11.3 0 0 0 12 .7Z"
-                />
-              </svg>
+              <img src="/asset/live-support.png" alt="" class="w-17.5 h-17.5"/>
 
               <h3 class="mt-3 mb-3 text-base font-bold leading-6">
                 {{ item.title }}
               </h3>
 
-              <p class="mb-3 max-w-[280px] text-center text-[10px] leading-4">
+              <p class="mb-3 max-w-70 text-center text-base leading-6">
                 {{ item.text }}
               </p>
 
-            </article>
-          </a>
+            </div>
+          </button>
         </div>
       </section>
       <section
@@ -458,15 +405,15 @@
 
           <div class="mb-8 flex items-center justify-between">
             <h2 class="text-2xl font-bold leading-7">
-              Frequently Asked Questions
+              Most popular articles
             </h2>
 
-            <NuxtLink
-                to="/wallets"
-                class="text-base leading-6"
+            <button
+                @click="openTawkChat()"
+                class="text-base text-[#88cbf5] leading-6 cursor-pointer"
             >
               View all article
-            </NuxtLink>
+            </button>
           </div>
 
 
@@ -474,40 +421,32 @@
 
             <div
                 v-for="(faq, index) in faqs"
-                :key="faq"
+                :key="faq.title"
                 class="min-h-[83px] border-b border-[#dee2e6] px-5 py-[18px] sm:border-r"
                 :class="{
       'sm:border-r-0': index % 2 === 1,
       'sm:border-b-0': index >= faqs.length - 2
     }"
             >
-              <NuxtLink
-                  to="/wallets"
-                  class="flex items-start text-base font-bold leading-6 text-white no-underline"
+              <button
+                  @click="openTawkChat()"
+                  class="cursor-pointer flex items-start text-base font-bold leading-6 text-[#a5a8a9] no-underline"
               >
                 <!-- Plus icon -->
                 <span class="relative mt-[2px] mr-2 h-5 w-5 shrink-0">
-      <span
-          class="absolute left-1/2 top-1/2 h-[2px] w-3
-                 -translate-x-1/2 -translate-y-1/2 bg-[#8e7cff]"
-      ></span>
-
-      <span
-          class="absolute left-1/2 top-1/2 h-3 w-[2px]
-                 -translate-x-1/2 -translate-y-1/2 bg-[#8e7cff]"
-      ></span>
+      <img src="/asset/file.svg" alt=""/>
     </span>
 
-                <div class="mr-5">
+                <div class="mr-5 flex flex-col items-start">
                   <strong>
-                    {{ faq }}
+                    {{ faq.title }}
                   </strong>
 
                   <small class="mt-[5px] block text-sm font-normal leading-5">
-                    Modified recently
+                    {{faq.date}}
                   </small>
                 </div>
-              </NuxtLink>
+              </button>
             </div>
 
           </div>
@@ -517,7 +456,7 @@
       </section>
 
     </main>
-    <footer class="h-[56px] bg-[#1f1f1f] flex items-center justify-center text-center text-base leading-6">
+    <footer class="h-14 bg-[#a5a8a9] text-white flex items-center justify-center text-center text-base leading-6">
       Helpdesk Software by Freshdesk | Cookie policy
     </footer>
     <HomeWalletModal :open="showHomeWalletModal" @close="showHomeWalletModal = false" />
@@ -543,41 +482,28 @@ const popularLinks = [
 ]
 
 const articles = [
-  ['Transaction', 'Blockchain transactions are secure, transparent, and irreversible. Once recorded, they cannot be altered.'],
-  ['Wallet Encryption', 'Wallet encryption provides digital security by securing private keys with advanced encryption.'],
-  ['Open-Source Software', 'Blockchain technology is open-source, allowing anyone to contribute, improve, and customize it.'],
-  ['MIGRATION', 'Click here for migration and resolve any migration related issues.'],
-  ['RECTIFICATION', 'Click here to rectify all your wallet issues.'],
-  ['CLAIM', 'Click here to claim tokens or receive any token claiming related issues.'],
-  ['SWAP', 'Click here to swap tokens or resolve issues related to token swaps.'],
-  ['SLIPPAGE', 'Click here for slippage or transaction fee related issues.'],
-  ['CLAIM AIRDROP', 'Click here to claim airdrop or resolve errors encountered during airdrop claim.'],
-  ['STAKING', 'Click here to resolve issues encountered while staking/unstaking.'],
-  ['WHITELIST', 'Click here to whitelist your asset or resolve whitelist related issues.'],
-  ['CROSS TRANSFER', 'Click here to resolve cross bridge or cross transfer issues.'],
-  ['NFTs', 'Click here to resolve NFT related issues.'],
-  ['LOCKED ACCOUNT', 'Click here to resolve locked account or wallet related issues.'],
-  ['LOGIN ERROR', 'Click here to resolve errors encountered during login.'],
-  ['WALLET GLITCH', 'Click here to resolve wallet issues.'],
-  ['DEFI FARMING', 'Click here for DeFi or farming related issues.'],
-  ['VALIDATION', 'Click here to validate your wallet and resolve issues.'],
-  ['TRANSACTION DELAY', 'Click here for any transaction related errors.'],
-  ['MISSING/IRREGULAR BALANCE', 'Click here to resolve lost or missing funds.'],
-  ['RECOVERY', 'Click here for wallet recovery.'],
-  ['BUY TOKEN/COIN', 'Click here to learn your account is to be marked as a trusted payment source to start trading.'],
-  ['EXCHANGE', 'Click here to resolve exchange or resolve errors encountered during token exchange.'],
-  ['BRIDGING', 'Click here to bridge tokens or resolve bridging related issues.'],
-  ['Premium Dev Support', 'Click here to access premium step-by-step tutorials tailored for developers.']
+  ['Blockchain', 'Live Support is capable of handling higher transaction volume than its counterpart - Ethereum...'],
+  ['Wallet Encryption', 'Wallet encryption allows you to secure your wallet, so that you can view transactions and your account balance...'],
+  ['Open-Source Software', 'Live Support is an open source software project released under the MIT/X11 license which gives you the power to...'],
 ].map(([title, text]) => ({
   title,
   text
 }))
 
 const faqs = [
-  'How do I deploy a smart contract to a blockchain network using GitHub Actions?',
-  'Can I use GitHub to store and manage blockchain project dependencies?',
-  'How can I integrate GitHub with a decentralized application (dApp) for version control?',
-  'What are the best practices for securing private keys in a GitHub-hosted blockchain project?'
+    { "title":  'Change wallet after transaction',
+      "date": "Modified on 24 October by MGK71"
+
+},
+  { "title": 'Why is litecoin so strong?',
+    "date": "Modified on 17 August by Nolan Matthew"
+  },
+  { "title": 'Want to boost your business online visibilty in 2023?',
+    "date": "Modified on 25 October by Design Centrals"
+  },
+  { "title": 'Buy and sell crypto currency in Dubai',
+    "date": "Modified on 09 October by Xchangeruae"
+  },
 ]
 const openTawkChat = () => {
   if (typeof window !== 'undefined' && window.Tawk_API) {
