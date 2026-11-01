@@ -1,22 +1,13 @@
 <template>
   <div class="min-h-screen bg-white text-black">
-    <header class="fixed inset-x-0 top-0 z-50 h-24 md:h-16.5 bg-[#f8f9fa]">
+    <header class="fixed inset-x-0 top-0 z-50 h-20 md:h-16.5 bg-[#f8f9fa]">
       <div class="relative mx-auto h-full w-full px-3 lg:hidden">
-        <div class="flex h-16.5 w-full items-center">
+        <div class="flex w-full h-full items-center justify-between">
           <a
               href="#"
-              class="flex min-w-0 flex-1 items-center no-underline"
+              class="flex min-w-0 items-center no-underline"
           >
-            <svg
-                class="h-[clamp(32px,10vw,40px)] w-[clamp(32px,10vw,40px)] shrink-0 text-white"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-            >
-              <path
-                  fill="currentColor"
-                  d="M12 .7a11.3 11.3 0 0 0-3.58 22.02c.57.1.78-.25.78-.55v-2.02c-3.17.69-3.84-1.34-3.84-1.34-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.73-1.53-2.53-.29-5.19-1.27-5.19-5.65 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.13 1.17a10.9 10.9 0 0 1 5.7 0c2.17-1.48 3.13-1.17 3.13-1.17.62 1.57.23 2.73.11 3.02.73.8 1.18 1.82 1.18 3.07 0 4.39-2.67 5.35-5.21 5.64.41.36.78 1.06.78 2.14v3.18c0 .3.21.66.79.55A11.3 11.3 0 0 0 12 .7Z"
-              />
-            </svg>
+            <img src="/asset/live-support.png" alt="Live Support" class="h-12 w-12"/>
 
             <span
                 class="ml-2 min-w-0 truncate text-[clamp(14px,4.5vw,20px)] font-normal text-[#a5a8a9]"
@@ -24,37 +15,39 @@
         Live Support
       </span>
           </a>
+          <div class="flex items-center justify-between gap-x-4">
           <button
               type="button"
               @click="homeWalletModal"
-              class="ml-2 shrink-0 cursor-pointer rounded-md py-2.5 px-3.75 bg-[#88cbf5] text-[clamp(12px,3.5vw,14px)] text-white no-underline"
+              class="shrink-0 cursor-pointer rounded-md py-2.5 px-3.75 bg-[#88cbf5] text-[clamp(12px,3.5vw,14px)] text-white no-underline"
           >
             Connect
           </button>
+                  <button
+                      type="button"
+                      class="flex h-7 w-7 items-center justify-center border border-gray-300 rounded-md px-6 py-5"
+                      @click="mobileMenuOpen = !mobileMenuOpen"
+                      aria-label="Toggle navigation"
+                  >
+              <span class="flex flex-col gap-1">
+                <span class="block h-0.5 w-6 bg-gray-600 rounded-sm"></span>
+                <span class="block h-0.5 w-6 bg-gray-600 rounded-sm"></span>
+                <span class="block h-0.5 w-6 bg-gray-600 rounded-sm"></span>
+              </span>
+                  </button>
+            <div
+                v-if="mobileMenuOpen"
+                class="absolute left-0 right-0 top-20 border-t border-[#222] bg-white px-4 py-3"
+            >
+              <button
+                  @click="openTawkChat()"
+                  class="block text-sm border border-[#eee] rounded-md px-3.75 py-2.5 text-[#a5a8a9] no-underline"
+              >
+                Talk to an Agent
+              </button>
+            </div>
+          </div>
 
-        </div>
-        <button
-            type="button"
-            class="absolute bottom-3 left-3 flex h-7 w-7 items-center justify-center border-0 bg-transparent p-0"
-            @click="mobileMenuOpen = !mobileMenuOpen"
-            aria-label="Toggle navigation"
-        >
-    <span class="flex flex-col gap-[4px]">
-      <span class="block h-[1px] w-[18px] bg-white"></span>
-      <span class="block h-[1px] w-[18px] bg-white"></span>
-      <span class="block h-[1px] w-[18px] bg-white"></span>
-    </span>
-        </button>
-        <div
-            v-if="mobileMenuOpen"
-            class="absolute left-0 right-0 top-24 border-t border-[#222] bg-black px-4 py-3"
-        >
-          <button
-              @click="openTawkChat()"
-              class="block py-2 text-[10px] text-white no-underline"
-          >
-            Talk to an Agent
-          </button>
         </div>
 
       </div>
@@ -74,7 +67,7 @@
           <button
 
               @click="openTawkChat()"
-              class="flex items-center bg-white text-[#a5a8a9] cursor-pointer rounded-md border border-[#eee] px-2.5 py-3.75 text-base no-underline"
+              class="flex items-center bg-white text-[#a5a8a9] cursor-pointer rounded-md border border-[#eee] px-2.5 py-2.5 text-base no-underline"
           >
             Talk to an Agent
           </button>
